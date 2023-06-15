@@ -63,7 +63,7 @@ app.post('/login', (req: Request, res: Response) => {
       id: 1,
       name: 'Usuário',
       email: 'usuario@example.com',
-      role: 'user', 
+      role: 'admin', 
     };
 
     const token = generateToken(user);

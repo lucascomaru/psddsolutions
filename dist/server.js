@@ -52,7 +52,6 @@ function checkPermissions(roles) {
         next();
     };
 }
-
 app.use(express_1.default.json());
 app.post('/login', (req, res) => {
     const { email, senha } = req.body;
@@ -61,7 +60,7 @@ app.post('/login', (req, res) => {
             id: 1,
             name: 'Usuário',
             email: 'usuario@example.com',
-            role: 'user',
+            role: 'admin',
         };
         const token = generateToken(user);
         return res.json({ token });
@@ -142,6 +141,10 @@ app.delete('/users/:id', authenticate, checkPermissions(['admin']), (req, res) =
         res.status(500).json({ message: 'Erro ao remover usuário' });
     }
 }));
+app.get('/', (req, res) => {
+    res.send('Bem-vindo ao servidor!');
+  });
+  
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });

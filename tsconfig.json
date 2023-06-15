@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "outFile": "./dist/app.js",
+        "outDir": "./dist",
         "strict": true,
         "esModuleInterop": true,
         "experimentalDecorators": true,
@@ -16,3 +16,4 @@
         "node_modules"
     ]
 }
+
