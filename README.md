@@ -25,3 +25,22 @@ Clone o repositório para o seu ambiente local.
 No diretório raiz do projeto, execute o comando npm install para instalar as dependências necessárias.
 Configure o banco de dados editando o arquivo ormconfig.json. Certifique-se de fornecer as informações corretas para a conexão com o banco de dados desejado.
 Execute o comando npm run start para iniciar a aplicação. O servidor será executado na porta 3000, a menos que seja especificada outra porta no arquivo server.js.
+
+Rotas
+GET /users
+GET /users/:id
+POST /users
+PUT /users/:id
+DELETE /users/:id
+
+Este projeto foi testado utilizando o Postman, uma plataforma que permite realizar requisições HTTP e testar APIs de forma interativa.
+Cabeçalho para requisição: Authorization: Bearer token_gerado
+
+Considerações Finais
+Este projeto demonstra a implementação de autenticação e controle de acesso em uma API usando o framework Express, o ORM TypeORM e tokens JWT. Foi possível observar as seguintes funcionalidades:
+
+Autenticação de usuário utilizando email e senha.
+Proteção de rotas, permitindo o acesso apenas a usuários autenticados com um token JWT válido.
+Controle de permissões, permitindo que apenas usuários com a permissão de administrador acessem determinadas rotas.
+Gerenciamento de usuários, incluindo listagem, criação, atualização e exclusão.
+
